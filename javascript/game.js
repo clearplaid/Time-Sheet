@@ -34,3 +34,23 @@ var config = {
                         dataAdded: firebase.database.ServerValue.TIMESTAMP});
 
   });
+  dataRef.ref().on("child_added", function(childSnapshot) {
+
+    // Log everything that's coming out of snapshot
+    console.log(childSnapshot.val().name);
+    console.log(childSnapshot.val().role);
+    console.log(childSnapshot.val().startDate);
+    console.log(childSnapshot.val().monthlyRate);
+    console.log(childSnapshot.val().dataAdded);
+
+    // full list of items to the well
+    $("#employeeInfo").append("<tr class='employee'><td class='emp-name'> " + childSnapshot.val().name +
+      " </td><td class='emp-role'> " + childSnapshot.val().role +
+      " </td><td class='emp-startDate'> " + childSnapshot.val().startDate +
+      " </td><td class='emp-monthlyRate'> " + childSnapshot.val().monthlyRate +
+      " </td></tr>");
+
+    // Handle the errors
+  }, function(errorObject) {
+    console.log("Errors handled: " + errorObject.code);
+  });
