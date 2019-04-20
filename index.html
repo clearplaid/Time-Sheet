@@ -24,8 +24,7 @@
         </div>
     </div>
 
-    <div class="container"> Current Employees
-
+    <div class="container">
             <table class="table table-striped">
                     <thead>
                       <tr>
@@ -95,14 +94,46 @@
             </table>
     </div>
 
+      </div>
 
+      <br>
+      <br>
+      <div class="container">
+      <div class="row">
 
-
-
-
-
-
-
+            <!-- Sign-Up Card-->
+            <div class="col-md-12">
+              <div class="card card-default" style="padding:1%">
+                <div class="card-header">
+                        <label for="add-employee">
+                 Add Employee </label>
+                </div>
+                <div class="card-body">
+                  <!-- Sign-up Form (note the various input "types")-->
+                  <form role="form">
+                    <div class="form-group row">
+                      <label for="employee-name-input">Employee Name:</label>
+                      <input class="form-control" id="name-input" type="text">
+                    </div>
+                    <div class="form-group row">
+                      <label for="role-input">Role:</label>
+                      <input class="form-control" id="role-input" type="text">
+                    </div>
+                    <div class="form-group row">
+                      <label for="date-input">Start Date (MM/DD/YYYY):</label>
+                      <input class="form-control" id="date-input" type="date">
+                    </div>
+                    <div class="form-group row">
+                      <label for="rate-input">Monthly Rate:</label>
+                      <input class="form-control" id="rate-input" type="number">
+                    </div>
+                    <button class="btn btn-default" id="add-employee" type="submit">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+      </div>
+      </div>
 
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
