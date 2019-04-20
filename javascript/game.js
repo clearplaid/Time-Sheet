@@ -11,19 +11,20 @@ var config = {
   firebase.initializeApp(config);
   var database = firebase.database();
 
+  var name = "";
+  var role = "";
+  var startDate = "";
+  var monthlyRate = 0;
 
   $('#add-employee').on("click", function(){
     // get value
-    var name = $('name-input').val().trim();
-    var role = $('role-input').val().trim();
-    var startDate = $('date-input').val().trim();
-    var monthlyRate = $('rate-input').val().trim();
+    name = $('#name-input').val().trim();
+    role = $('#role-input').val().trim();
+    startDate = $('#date-input').val().trim();
+    monthlyRate = $('#rate-input').val().trim();
+    console.log(name)
     // validate
     if (name === "" || role === "" || startDate === "" || monthlyRate === "") return;
-    // empty inputs
-
-    
-    // compute field data
 
     // add to database
     database.ref().push({name: name, 
